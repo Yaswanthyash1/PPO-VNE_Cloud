@@ -92,10 +92,13 @@ For questions or inquiries, please contact:
 <div style="font-family: Arial, sans-serif; font-size: 16px;">
   <strong>N Yaswanth</strong> <br>
   <a href="mailto:your.email@example.com">yaswanthnamburi1010@gmail.com</a>
+   
    <strong>Syed Farhan</strong> <br>
   <a href="mailto:your.email@example.com">syedfarhan.221cs254@nitk.edu.in</a>
+  
    <strong>Vishruth S Kumar</strong> <br>
   <a href="mailto:your.email@example.com">vishruthskumar.221cs262@nitk.edu.in</a>
+  
    <strong>Yashas</strong> <br>
   <a href="mailto:your.email@example.com">yashas.221cs265@nitk.edu.in</a>
 </div>
