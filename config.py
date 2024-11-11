@@ -14,7 +14,7 @@ class Config:
         self.bandwidth_demand_range = (10, 30)
         
         # Energy parameters
-        self.P_idle = 150  # Idle power consumption
+        self.P_idle = 100  # Idle power consumption
         self.P_peak = 250  # Peak power consumption
         self.P_port = 10   # Port power consumption
         self.bandwidth_unit_power = 0.1

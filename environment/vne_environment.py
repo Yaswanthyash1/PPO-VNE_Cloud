@@ -1,4 +1,5 @@
 import numpy as np
+from optimizer.energy_optimizer import EnergyOptimizer
 
 class VNEEnvironment:
     def __init__(self, config):
@@ -9,7 +10,11 @@ class VNEEnvironment:
         self.embedded_vn_counts = 0
         self.revenues = 0
         self.costs = 0
-    
+        self.energy_optimizer = EnergyOptimizer(config)
+        self.total_energy = 0
+        self.energy_consumption = 0
+        self.current_virtual_network = None
+
     def reset(self):
         self.substrate_network.reset()
         self.virtual_networks = []
@@ -17,7 +22,9 @@ class VNEEnvironment:
         self.embedded_vn_counts = 0
         self.revenues = 0
         self.costs = 0
-        
+        self.total_energy = 0
+        self.energy_consumption = 0
+
         return self._get_state()
     
     def step(self, action):
@@ -42,6 +49,14 @@ class VNEEnvironment:
         # Calculate reward
         reward = self.revenues - self.costs
         
+        self.energy_consumption = self.energy_optimizer.calculate_energy(
+            self.substrate_network 
+            )
+        self.total_energy += self.energy_consumption
+        
+        # Incorporate energy into reward calculation
+        energy_penalty = self.config.energy_weight * self.energy_consumption
+        reward -= energy_penalty
         # Check if episode is done
         done = self.total_vn_requests >= self.config.max_vn_requests
         
@@ -136,6 +151,7 @@ class Node:
     def reset(self):
         self.cpu_utilization = 0
         self.stress = 0
+
     
     def can_embed(self, vn_request):
         # Check if node can embed virtual network
