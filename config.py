@@ -2,7 +2,7 @@ class Config:
     def __init__(self):
         # Network parameters
         self.num_nodes = 20  # Number of substrate network nodes
-        self.edge_prob = 0.3  # Probability of edge creation
+        self.edge_prob = 0.1  # Probability of edge creation
         self.max_cpu = 100
         self.max_bandwidth = 100
         
@@ -10,7 +10,7 @@ class Config:
         self.min_vn_nodes = 2
         self.max_vn_nodes = 5
         self.cpu_demand_range = (10, 30)
-        self.max_vn_requests = 100
+        self.max_vn_requests = 120
         self.bandwidth_demand_range = (10, 30)
         
         # Energy parameters
