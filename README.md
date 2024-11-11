@@ -74,7 +74,12 @@ The framework has demonstrated superior performance in key metrics compared to b
 
 - Higher acceptance rates
 - Increased overall revenue
-- Improved revenue-to-cost and revenue-to-energy ratios
+- Improved revenue-to-cost and revenue-to-energy ratios.
+
+
+![WhatsApp Image 2024-11-11 at 19 22 08_364cda33](https://github.com/user-attachments/assets/704a526e-161d-4a5d-8ce8-3c1e083ee802)
+
+
 
 For detailed results and analyses, please refer to the Results and Analysis section in the report.
 
